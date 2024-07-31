@@ -1,15 +1,15 @@
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../../../public/ui/tooltip";
 import Link from "next/link";
-import { Sheet, SheetTrigger, SheetContent } from "@/public/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "../../../public/ui/sheet";
 import { Button } from "../../../public/ui/button";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink } from "../../../public/ui/breadcrumb";
 import { Input } from "../../../public/ui/input";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuCheckboxItem } from "../../../public/ui/dropdown-menu";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "../../../public/ui/card";
 import { Progress } from "../../../public/ui/progress";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/public/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../../public/ui/tabs";
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "../../../public/ui/table";
-import { Badge } from "@/public/ui/badge";
+import { Badge } from "../../../public/ui/badge";
 
 export default function Component() {
   return (

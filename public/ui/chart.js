@@ -298,7 +298,7 @@ function getPayloadConfigFromPayload(
     : config[key];
 }
 
-export default {
+export  {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,

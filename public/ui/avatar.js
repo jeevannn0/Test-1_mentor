@@ -32,6 +32,5 @@ const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-// Default export as a component with all features
-const AvatarComponent = { Avatar, AvatarImage, AvatarFallback };
-export default AvatarComponent;
+// Named exports for individual components
+export { Avatar, AvatarImage, AvatarFallback };

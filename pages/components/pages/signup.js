@@ -7,9 +7,9 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Link from "next/link";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Label } from "../../../public/ui/label";
+import { Input } from "../../../public/ui/input";
+import { Button } from "../../../public/ui/button";
 
 export default function Signup() {
   const [email, setEmail] = useState('');

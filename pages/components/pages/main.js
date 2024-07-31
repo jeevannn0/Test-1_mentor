@@ -1,8 +1,8 @@
 
 import Link from "next/link"
-import { Button } from "../ui/button"
-import { Card, CardHeader, CardContent } from "../ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
+import { Button } from "../../../public/ui/button"
+import { Card, CardHeader, CardContent } from "../../../public/ui/card"
+import { Avatar, AvatarImage, AvatarFallback } from "../../../public/ui/avatar"
 
 export function Main() {
   return (

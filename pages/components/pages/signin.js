@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '@/firebase'; 
 import { toast } from "react-toastify";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Label } from "../../../public/ui/label";
+import { Input } from "../../../public/ui/input";
+import { Button } from "../../../public/ui/button";
 
 export default function Signin() {
   const [email, setEmail] = useState("");

@@ -94,7 +94,7 @@ const SheetDescription = React.forwardRef(({ className, ...props }, ref) => (
 ))
 SheetDescription.displayName = SheetPrimitive.Description.displayName
 
-export {
+export default {
   Sheet,
   SheetPortal,
   SheetOverlay,

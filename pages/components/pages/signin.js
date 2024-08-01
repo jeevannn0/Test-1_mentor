@@ -22,7 +22,7 @@ export default function Signin() {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen flex items-center justify-center">
       <div className="w-full md:w-1/2 bg-card p-8 space-y-6 flex items-center justify-center">
         <div className="space-y-2 text-left">
           <div className="flex items-center justify-between">

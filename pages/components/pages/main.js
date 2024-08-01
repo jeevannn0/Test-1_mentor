@@ -5,7 +5,7 @@ import Prt2 from "../main/prt2";
 import Prt3 from "../main/prt3";
 import Prt4 from "../main/prt4";
 import Pricing from "../main/pricing";
-import { Courses } from "../main/courses";
+import Courses from "../main/courses";
 import Services from "../main/services";
 import Footer from "../main/footer";
 

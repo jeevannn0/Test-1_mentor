@@ -4,7 +4,7 @@ import { Button } from "../../../public/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../../../public/ui/carousel"
 import { Card, CardContent } from "../../../public/ui/card"
 
-export function Courses() {
+export default function Courses() {
   return (
     (<div className="flex flex-col  items-center justify-center">
       <main className="flex-1">

@@ -1,91 +1,223 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/hRvHh4L94Vq
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+"use client"
 
-import Link from "next/link"
-import { Button } from "../../../public/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../../../public/ui/carousel"
+import { useState } from "react"
+import { Button } from "../../../public/ui/buttons"
+import { Badge } from "../../../public/ui/badge"
 import { Card, CardContent } from "../../../public/ui/card"
+import { Avatar, AvatarImage, AvatarFallback } from "../../../public/ui/avatar"
+import Link from "next/link"
 
-export default function Courses() {
+export default function Component() {
+  const [activeFilter, setActiveFilter] = useState("all")
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter)
+  }
+  const filteredCourses = () => {
+    if (activeFilter === "beginner") {
+      return [
+        {
+          title: "Generative AI Fundamentals",
+          provider: "IBM",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Beginner",
+        },
+        {
+          title: "AI for Good",
+          provider: "DeepLearning.AI",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Beginner",
+        },
+      ]
+    } else if (activeFilter === "popular") {
+      return [
+        {
+          title: "Generative AI Fundamentals",
+          provider: "IBM",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Popular",
+        },
+        {
+          title: "Navigating Generative AI for Leaders",
+          provider: "Coursera",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Popular",
+        },
+      ]
+    } else if (activeFilter === "new") {
+      return [
+        {
+          title: "AI for Good",
+          provider: "DeepLearning.AI",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "New",
+        },
+        {
+          title: "Navigating Generative AI for Leaders",
+          provider: "Coursera",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "New",
+        },
+      ]
+    } else if (activeFilter === "tools") {
+      return [
+        {
+          title: "Generative AI Fundamentals",
+          provider: "IBM",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Tools",
+        },
+        {
+          title: "AI for Good",
+          provider: "DeepLearning.AI",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Tools",
+        },
+        {
+          title: "Navigating Generative AI for Leaders",
+          provider: "Coursera",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Tools",
+        },
+      ]
+    } else {
+      return [
+        {
+          title: "Generative AI Fundamentals",
+          provider: "IBM",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Beginner",
+        },
+        {
+          title: "AI for Good",
+          provider: "DeepLearning.AI",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "Popular",
+        },
+        {
+          title: "Navigating Generative AI for Leaders",
+          provider: "Coursera",
+          type: "Specialization",
+          image: "/placeholder.svg?height=200&width=300",
+          badge: "New",
+        },
+      ]
+    }
+  }
   return (
-    (<div className="flex flex-col  items-center justify-center">
-      <main className="flex-1">
-        <section className="py-12 md:py-24 lg:py-32">
-          <div className="container">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Top Selling Products</h2>
-              <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
-                View All
-              </Link>
-            </div>
-            <Carousel className="rounded-lg overflow-hidden">
-              <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card>
-                      <img
-                        src="/placeholder.svg"
-                        alt="Product"
-                        width={400}
-                        height={400}
-                        className="rounded-t-lg w-full h-60 object-cover" />
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold">Stylish Sunglasses</h3>
-                        <p className="text-muted-foreground text-sm">UV protection</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="text-base font-semibold">$29.99</span>
-                          <Button size="sm">Add to Cart</Button>
-                        </div>
-                      </CardContent>
-                    </Card>
+    <div className="flex flex-col items-center justify-center min-h-screen ml-16 mr-16 bg-blue-50">
+      <div className="flex flex-col w-full max-w-7xl p-8 space-y-8 bg-white rounded-lg shadow-lg animate-slide-in">
+        <div className="flex flex-col space-y-4">
+          <h1 className="text-3xl font-bold">Get started with GenAI</h1>
+          <p className="text-lg text-gray-600">Identify, develop and execute impactful GenAI business strategies.</p>
+          
+        </div>
+        <div className="flex justify-center space-x-4">
+          <Badge
+            variant={activeFilter === "all" ? "primary" : "default"}
+            onClick={() => handleFilterClick("all")}
+            className="px-6 py-2 text-base"
+          >
+            All
+          </Badge>
+          <Badge
+            variant={activeFilter === "beginner" ? "primary" : "default"}
+            onClick={() => handleFilterClick("beginner")}
+            className="px-6 py-2 text-base"
+          >
+            Beginner
+          </Badge>
+          <Badge
+            variant={activeFilter === "popular" ? "primary" : "default"}
+            onClick={() => handleFilterClick("popular")}
+            className="px-6 py-2 text-base"
+          >
+            Popular
+          </Badge>
+          <Badge
+            variant={activeFilter === "new" ? "primary" : "default"}
+            onClick={() => handleFilterClick("new")}
+            className="px-6 py-2 text-base"
+          >
+            New
+          </Badge>
+          <Badge
+            variant={activeFilter === "tools" ? "primary" : "default"}
+            onClick={() => handleFilterClick("tools")}
+            className="px-6 py-2 text-base"
+          >
+            Tools
+          </Badge>
+        </div>
+        <div className="relative">
+          <div className="flex overflow-x-auto space-x-4">
+            {filteredCourses().map((course, index) => (
+              <Card key={index} className="w-[300px] flex-shrink-0 animate-slide-in">
+                <img src="/placeholder.svg" alt={course.title} className="w-full h-48 rounded-t-lg object-cover" />
+                <CardContent>
+                  <div className="flex items-center space-x-2">
+                    <Avatar>
+                      <AvatarImage src="/placeholder-user.jpg" alt={course.provider} />
+                      <AvatarFallback>{course.provider.slice(0, 2)}</AvatarFallback>
+                    </Avatar>
+                    <p className="text-sm font-medium">{course.provider}</p>
                   </div>
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card>
-                      <img
-                        src="/placeholder.svg"
-                        alt="Product"
-                        width={400}
-                        height={400}
-                        className="rounded-t-lg w-full h-60 object-cover" />
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold">Leather Crossbody Bag</h3>
-                        <p className="text-muted-foreground text-sm">Stylish and practical</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="text-base font-semibold">$49.99</span>
-                          <Button size="sm">Add to Cart</Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card>
-                      <img
-                        src="/placeholder.svg"
-                        alt="Product"
-                        width={400}
-                        height={400}
-                        className="rounded-t-lg w-full h-60 object-cover" />
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold">Wireless Headphones</h3>
-                        <p className="text-muted-foreground text-sm">High-quality sound</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="text-base font-semibold">$79.99</span>
-                          <Button size="sm">Add to Cart</Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+                  <h2 className="mt-2 text-lg font-semibold">{course.title}</h2>
+                  <p className="text-sm text-gray-500">{course.type}</p>
+                  <Badge variant="secondary" className="mt-2">
+                    {course.badge}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </section>
-      </main>
-      
-    </div>)
-  );
+        </div>
+        <div className="flex justify-start">
+          <Link
+            href="#"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            All Courses
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ArrowRightIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  )
 }

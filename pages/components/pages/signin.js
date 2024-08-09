@@ -22,13 +22,13 @@ export default function Signin() {
   };
 
   return (
-    <div className="flex min-h-screen flex items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center">
+      <Link href="/" className="inline-flex items-center ml-[200px] mb-[547px]" prefetch={false}>
+            <img src="/The-Mentor-logo.png" alt="Logo" /> 
+      </Link>
       <div className="w-full md:w-1/2 bg-card p-8 space-y-6 flex items-center justify-center">
         <div className="space-y-2 text-left">
           <div className="flex items-center justify-between">
-            <Link href="/" className="inline-flex items-center gap-2" prefetch={false}>
-              <span className="font-bold">Acme Inc</span>
-            </Link>
           </div>
           <h1 className="text-3xl font-bold">Sign In</h1>
           <p className="text-muted-foreground">

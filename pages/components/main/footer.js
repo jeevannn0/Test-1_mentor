@@ -8,7 +8,7 @@ import { Button } from "../../../public/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted py-12 w-full flex items-center justify-center ">
+    <footer className="bg-muted py-12 w-full ">
       <div className="container max-w-7xl grid grid-cols-1 ml-52 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className="flex flex-col items-start gap-4 ">
           <Link href="/" className="flex items-center -ml-7" prefetch={false}>
@@ -66,12 +66,13 @@ export default function Footer() {
           
           <div className="flex flex-col gap-2">
             <p className="text-sm">Mobile application</p>
-            <Button variant="outline" className="w-56 -ml-14 bg-blue-500 text-white hover:bg-blue-600">
+            <Button variant="outline" className="w-44 -ml-9 bg-blue-500 text-white hover:bg-blue-600">
               Download
             </Button>
           </div>
         </div>
       </div>
+     
       <div className="container max-w-7xl mt-12 flex flex-col ml-32 sm:flex-row items-center justify-between">
         <p className="text-xs text-muted-foreground">&copy; 2024 Acme Inc. All rights reserved.</p>
         <nav className="flex gap-4 sm:gap-6 text-xs">
@@ -85,6 +86,7 @@ export default function Footer() {
             Cookie Policy
           </Link>
         </nav>
+        
       </div>
     </footer>
   )

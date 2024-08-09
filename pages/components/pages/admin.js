@@ -29,7 +29,7 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from ".
 
 export default function Admin() {
   return (
-    (<div className="flex min-h-screen w-full flex items-center justify-center">
+    (<div className="flex min-h-screen w-full items-center justify-center">
       <aside
         className="fixed inset-y-0 left-0 z-10 flex w-64 flex-col border-r bg-background sm:flex">
         <div className="flex h-16 items-center justify-between px-4">

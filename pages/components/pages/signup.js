@@ -27,7 +27,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex min-h-screen flex items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center">
+      <Link href="/" className="inline-flex items-center ml-[200px] mb-[547px]" prefetch={false}>
+            <img src="/The-Mentor-logo.png" alt="Logo" /> 
+      </Link>
       <div className="w-full md:w-1/2 bg-card p-8 space-y-6 flex items-center justify-center">
         <div className="space-y-2 text-left">
           <h1 className="text-3xl font-bold">Create an Account</h1>
